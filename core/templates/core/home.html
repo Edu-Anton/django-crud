@@ -1,0 +1,22 @@
+{% extends "core/base.html" %}
+
+{% comment %} MODO INCORRECTO  {% endcomment %}
+{% comment %} {% block background %}
+{% load static %}
+{% static 'core/img/home-bg.jpg' %}
+{% endblock background %} {% endcomment %}
+
+{% comment %} MODO CORRECTO DE CARGAR IMAGEN DINÁMICAMENTE {% endcomment %}
+{% block background %}{% load static %}{% static 'core/img/home-bg.jpg' %}{% endblock background %}
+
+{% block headers %}
+  <h1>Eduardo Calderón</h1>
+  <span class="subheading">Programador Web</span>
+{% endblock headers %}
+
+{% comment %} {% block content %}
+  <h1>Portada</h1>
+  <h2>Esta es la portada</h2>
+{% endblock content %} {% endcomment %}
+
+
